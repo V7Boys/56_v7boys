@@ -1,0 +1,16 @@
+
+#logo{
+    width: auto;
+    height: 5em;
+    margin-left: 5em;
+}
+.navList{
+    justify-content:safe;
+}
+.nav-item{
+    margin-left: 10%;
+}
+
+.sliderImg{
+    height: 25em;
+}
