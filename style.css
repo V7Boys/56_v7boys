@@ -1,4 +1,5 @@
 
+
 #logo{
     width: auto;
     height: 5em;
@@ -12,5 +13,38 @@
 }
 
 .sliderImg{
-    height: 25em;
+    height: 38em;
+}
+
+/* about us style */
+.aboutusContainer{
+    margin-top: 3%;
+}
+.aboutusContainer h1{
+    text-align: center;
+}
+.aboutus{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.aboutus p{
+    width: 50%;
+    font-size: 2em;
+    justify-self: center;
+    align-self: center;
+}
+.aboutus img{
+    /* width: 50%; */
+    border-radius: 35px;
+    border: 4px dashed red;
+    padding:4px;
+}
+#donateBlood{
+    background-color: red;
+    padding: 0px 15px;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
 }
