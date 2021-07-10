@@ -74,3 +74,10 @@
     background-color: red;
     color: white;
 }
+/* learn about donation */
+.learnDonation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
