@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+}
+.Enroll{
+    display: flex;
+    /* justify-content: center; */
+}
+.Enroll form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+   
+    margin: 2%;
+    border: 2px solid red;
+    justify-self: center;
+  
+}
+.item{
+    margin: 2%;
+}
+#submit{
+    margin-left: 50%;
+}
