@@ -115,3 +115,10 @@
       text-align: center;
       margin-top: 2%;
   }
+  .footer{
+      margin-top: 2%;
+      background-color: gray;
+      height: 10em;
+      text-align: center;
+  }
+
