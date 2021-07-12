@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+    padding: 2%;
+    background-color: red;
+    color: white;
+}
+#inputval{
+    margin-left: 2%;
+    width: 38em;
+}

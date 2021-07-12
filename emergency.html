@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/hackathon/img/emergency.css">
+    <title>Emergency Blood </title>
+</head>
+
+<body>
+    <h1>choose your blood banks by searching </h1>
+    <div class="input">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="inputval">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- <div id="result"> -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Place</th>
+                    <th scope="col">Available</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody id="addTable">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Manglore,YENEPOYA hospital</td>
+                    <td>O+ve,O-ve</td>
+                    <td>1234646</td>
+
+                </tr>
+            </tbody>
+        </table>
+    <!-- </div> -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+
+let tableContent = {
+            place: [
+                'Manglore,YENEPOYA HOSPITAL',
+                'Banglore, HBS HOSPITAL',
+                'Udupi, Father Mullar HOSPITAL',
+                'Banglore, MANIPAL HOSPITAL',
+                'Banglore, M.S. Ramaiah Memorial Hospital'
+            ],
+            Available: [
+                'O+ve,A+ve,B-ve',
+                'A+ve,B+ve,O+ve,A-ve',
+                'B+ve,A+ve,O-ve,A-ve',
+                'A+ve,B-ve,O+ve,A-ve,AB+ve,AB-ve',
+                'A+ve,B+ve,O+ve,A-ve,AB+ve'
+            ],
+            phone: [
+                '9865462634',
+                '12458736458',
+                '23569742142',
+                '457889336025',
+                '114784525563'
+            ]
+        }
+        let table = document.getElementById('addTable');
+        table.innerHTML = '';
+        for (let i = 0; i < 5; i++) {
+            table.innerHTML += `
+                <tr class="tabItem">
+                    <th scope="row">${i + 1}</th>
+                    <td id="p">${tableContent.place[i]}</td>
+                    <td>${tableContent.Available[i]}</td>
+                    <td>${tableContent.phone[i]}</td>
+                </tr>
+            `;
+        }
+
+
+        let search = document.getElementById('inputval');
+        search.addEventListener("input", function () {
+
+            let inputVal = search.value.toLowerCase();
+            let place = document.getElementsByClassName('tabItem');
+            Array.from(place).forEach(function (element) {
+                let cardTxt = element.getElementsByTagName('td')[0].innerText;
+                if (cardTxt.includes(inputVal)) {
+                    element.style.display = "block";
+                }
+                else {
+                    element.style.display = "none";
+                }
+                // console.log(cardTxt);
+            })
+        })
+    </script>
+</body>
+
+</html>
